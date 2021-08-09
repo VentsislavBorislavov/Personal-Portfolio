@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ReactComponent as MenuIcon } from "../images/hamburger.svg";
 const Nav = () => {
-  const [showLinks, setShowLinks] = useState(true);
+  const [showLinks, setShowLinks] = useState(window.innerWidth > 425);
 
   return (
     <nav>
