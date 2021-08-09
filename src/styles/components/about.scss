@@ -1,0 +1,171 @@
+#about {
+  display: inline-block;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  h2 {
+    color: $black;
+    display: inline-block;
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    margin: 0;
+    padding-top: 80px;
+    margin-left: 250px;
+    position: relative;
+    text-shadow: 4px 4px 6px rgba($color: $black, $alpha: 0.25);
+    @include media("<=desktop") {
+      font-size: 3rem;
+      margin-left: 210px;
+    }
+
+    @include media("<=tablet") {
+      margin-left: 90px;
+    }
+
+    @include media("<=phone") {
+      font-size: 2rem;
+      margin-left: 70px;
+    }
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 60px;
+      background-color: $gray;
+      position: absolute;
+      left: -50%;
+      z-index: -1;
+      @include media("<=phone") {
+        height: 40px;
+      }
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+    @include media("<=desktop") {
+      left: 8%;
+      right: 8%;
+    }
+    @include media("<=tablet") {
+      width: 90%;
+      margin: auto;
+      margin-top: 20px;
+      flex-direction: column;
+      position: unset;
+    }
+
+    .about-me,
+    .my-skills {
+      background-color: $white;
+      width: 440px;
+      min-height: 300px;
+      padding: 20px 30px;
+      position: relative;
+      @include media("<=desktop") {
+        width: 320px;
+        min-height: 240px;
+      }
+      @include media("<=tablet") {
+        position: unset;
+        margin-top: 50px;
+        min-height: unset;
+      }
+      @include media("<=phone") {
+        border: none;
+        width: 100%;
+      }
+      h3 {
+        font-size: 2.55rem;
+        margin: 30px 0;
+        text-transform: uppercase;
+        @include media("<=desktop") {
+          font-size: 1.8rem;
+          margin: 10px 0;
+        }
+        @include media("<=phone") {
+          font-size: 1.8rem;
+        }
+      }
+      p,
+      li {
+        font-size: 1.6rem;
+        font-weight: 600;
+        @include media("<=desktop") {
+          font-size: 1.3rem;
+        }
+        @include media("<=phone") {
+          font-size: 1.15rem;
+        }
+      }
+      &::before {
+        content: "";
+        background-color: $gray2;
+        position: absolute;
+        width: 200px;
+        height: 600px;
+        top: 50%;
+        z-index: -1;
+        transform: translateY(-50%);
+        @include media("<=desktop") {
+          width: 160px;
+          height: 500px;
+        }
+        @include media("<=tablet") {
+          display: none;
+        }
+      }
+    }
+
+    .about-me {
+      align-self: flex-start;
+      margin-top: 120px;
+      box-shadow: -7px 7px 22px rgba($color: $black, $alpha: 0.25);
+      @include media("<=tablet") {
+        margin: 40px;
+        align-self: center;
+      }
+      @include media("<=phone") {
+        box-shadow: none;
+      }
+      &::before {
+        right: -50px;
+        @include media("<=desktop") {
+          right: -60px;
+        }
+      }
+    }
+
+    .my-skills {
+      align-self: flex-end;
+      margin-bottom: 120px;
+      box-shadow: 7px 7px 22px rgba($color: $black, $alpha: 0.25);
+      @include media("<=tablet") {
+        margin: 0;
+        align-self: center;
+      }
+      @include media("<=phone") {
+        box-shadow: none;
+      }
+      ul {
+        li {
+          list-style-image: url("../../images/list-bullet.svg");
+        }
+      }
+
+      &::before {
+        left: -50px;
+        @include media("<=desktop") {
+          left: -60px;
+        }
+      }
+    }
+  }
+}
