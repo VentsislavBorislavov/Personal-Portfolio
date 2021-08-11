@@ -40,7 +40,7 @@ export const projects = [
   },
   {
     name: "Weather-app",
-    technologies: ["React", "Redux", "Redux-toolkit", "gsap"],
+    technologies: ["React", "Redux", "Redux-toolkit", "gsap", "REST api"],
     video: calcVideo,
     links: [
       {
