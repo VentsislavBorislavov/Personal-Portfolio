@@ -1,4 +1,5 @@
 import { projects } from "../data";
+import Video from "./Video";
 
 const Projects = () => {
   return (
@@ -9,9 +10,7 @@ const Projects = () => {
       <div className="all-projects">
         {projects.map((project, index) => (
           <div className="project" key={index}>
-            <div className="video-holder">
-              <video src={project.video} loop muted></video>
-            </div>
+            <Video video={project.video} />
             <div className="info">
               <h3>{project.name}</h3>
               <h4>Used Technologies</h4>
