@@ -1,6 +1,9 @@
 import githubIcon from "../images/github-icon.svg";
 import codesandboxIcon from "../images/codesandbox-icon.svg";
 import webIcon from "../images/web-icon.svg";
+import facebookIcon from "../images/facebook-icon.svg";
+import linkedinIcon from "../images/linkedin-icon.svg";
+import emailIcon from "../images/email-icon.svg";
 import calcVideo from "../videos/react-calc.mp4";
 
 export const projects = [
@@ -54,5 +57,23 @@ export const projects = [
         icon: webIcon,
       },
     ],
+  },
+];
+
+export const footerLinks = [
+  {
+    site: "LinkedIn",
+    icon: linkedinIcon,
+    link: "https://www.linkedin.com/in/vencislav-borislavov-2b2145217",
+  },
+  {
+    site: "Facebook",
+    icon: facebookIcon,
+    link: "https://www.facebook.com/Vencislav.k.b/",
+  },
+  {
+    site: "Email",
+    icon: emailIcon,
+    link: "mailto:vkosevb@gmail.com",
   },
 ];
