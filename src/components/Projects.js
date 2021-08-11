@@ -3,7 +3,9 @@ import { projects } from "../data";
 const Projects = () => {
   return (
     <section id="projects">
-      <h2>Projects</h2>
+      <h2>
+        <span>Projects</span>
+      </h2>
       <div className="all-projects">
         {projects.map((project, index) => (
           <div className="project" key={index}>
@@ -21,7 +23,7 @@ const Projects = () => {
               <h4>Links</h4>
               <div className="project-links">
                 {project.links.map((link, idx) => (
-                  <a href={link.link} key={idx}>
+                  <a href={link.link} key={idx} className="link">
                     <img src={link.icon} alt="icon" className="link-icon" />
                     {link.site}
                   </a>

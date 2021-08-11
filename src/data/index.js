@@ -22,8 +22,8 @@ export const projects = [
     ],
   },
   {
-    name: "React-Calculator",
-    technologies: ["React", "Redux", "Redux-toolkit"],
+    name: "Notes-app",
+    technologies: ["React", "Redux", "firebase", "framer-motion"],
     video: calcVideo,
     links: [
       {
@@ -32,15 +32,15 @@ export const projects = [
         icon: githubIcon,
       },
       {
-        site: "CodeSandbox",
+        site: "Notes-app",
         link: "https://nvcez.csb.app/",
-        icon: codesandboxIcon,
+        icon: webIcon,
       },
     ],
   },
   {
-    name: "React-Calculator",
-    technologies: ["React", "Redux", "Redux-toolkit"],
+    name: "Weather-app",
+    technologies: ["React", "Redux", "Redux-toolkit", "gsap"],
     video: calcVideo,
     links: [
       {
@@ -49,9 +49,9 @@ export const projects = [
         icon: githubIcon,
       },
       {
-        site: "CodeSandbox",
+        site: "Weather",
         link: "https://nvcez.csb.app/",
-        icon: codesandboxIcon,
+        icon: webIcon,
       },
     ],
   },
