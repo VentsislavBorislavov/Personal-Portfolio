@@ -3,7 +3,7 @@ import githubIcon from "../images/github-icon.svg";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer id="contact">
       <h2>
         <a href="#intro">Ventsislav Borislavov</a>
       </h2>
