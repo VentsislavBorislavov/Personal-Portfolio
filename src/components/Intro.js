@@ -3,17 +3,26 @@ import { ReactComponent as ArrowDown } from "../images/arrow-down.svg";
 const Intro = () => {
   return (
     <section id="intro">
-      <h1>
-        <span className="first-name">Ventsislav</span>
-        <span className="last-name">Borislavov</span>
+      <h1 className="first-name">
+        <span>Ventsislav</span>
+      </h1>
+      <h1 className="last-name">
+        <span>Borislavov</span>
       </h1>
       <div className="me">
         <img src={imageMe} alt="me" />
-        <span className="description">Passionate Programmer</span>
+        <div className="description">
+          <div className="desc-cont">
+            <span>Passionate Programmer</span>
+          </div>
+          <div className="after"></div>
+        </div>
       </div>
       <div className="scroll-down">
-        <span>Scroll</span>
-        <ArrowDown />
+        <a href="#about">
+          <span>Scroll</span>
+          <ArrowDown />
+        </a>
       </div>
     </section>
   );
