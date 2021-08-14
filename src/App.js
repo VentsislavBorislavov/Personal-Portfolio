@@ -1,12 +1,10 @@
 import { useEffect } from "react";
-import gsap from "gsap";
-import { CSSRulePlugin } from "gsap/all";
+import { gsap } from "gsap";
 import Nav from "./components/Nav";
 import Intro from "./components/Intro";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
-gsap.registerPlugin(CSSRulePlugin);
 function App() {
   useEffect(() => {
     const tl = gsap.timeline();
