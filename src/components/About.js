@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useState, useEffect } from "react";
+import { skills } from "../data";
 import H2 from "./H2";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -117,26 +118,13 @@ const About = () => {
               <span style={spanStyle}>My Skills</span>
             </h3>
             <ul className="skills">
-              <li>
-                <div className="info-holder">
-                  <span>JAVASCRIPT, JAVA, PYTHON</span>
-                </div>
-              </li>
-              <li>
-                <div className="info-holder">
-                  <span>HTML, CSS, SCSS</span>
-                </div>
-              </li>
-              <li>
-                <div className="info-holder">
-                  <span>REACT, REDUX, GSAP</span>
-                </div>
-              </li>
-              <li>
-                <div className="info-holder">
-                  <span>PHOTOSHOP, PREMIERE PRO, FIGMA</span>
-                </div>
-              </li>
+              {skills.map((skillSet, idx) => (
+                <li key={idx}>
+                  <div className="info-holder">
+                    <span>{skillSet}</span>
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="before"></div>

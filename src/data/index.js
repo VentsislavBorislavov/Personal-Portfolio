@@ -77,3 +77,10 @@ export const footerLinks = [
     link: "mailto:vkosevb@gmail.com",
   },
 ];
+
+export const skills = [
+  "JAVASCRIPT, JAVA, PYTHON",
+  "HTML, CSS, SCSS",
+  "REACT, REDUX, GSAP",
+  "PHOTOSHOP, PREMIERE PRO, FIGMA",
+];
