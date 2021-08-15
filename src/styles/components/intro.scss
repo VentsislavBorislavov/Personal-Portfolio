@@ -20,8 +20,7 @@
 
     @include media("<=phone") {
       font-size: 2rem;
-      margin-left: 50%;
-      transform: translateX(-50%);
+      margin: auto;
       text-align: center;
     }
 
@@ -104,6 +103,7 @@
       }
 
       @include media("<=phone") {
+        margin: auto;
         margin-top: 30px;
         font-size: 1.4rem;
         padding: 0;
@@ -127,6 +127,9 @@
         top: 50%;
         transform: translateY(-50%);
         z-index: -1;
+        @include media("<=phone") {
+          right: -5%;
+        }
       }
     }
   }
