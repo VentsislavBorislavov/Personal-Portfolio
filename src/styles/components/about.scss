@@ -30,9 +30,16 @@
       margin-left: 70px;
     }
 
-    &::before {
-      content: "";
-      width: 100%;
+    .about-holder {
+      overflow: hidden;
+      span {
+        display: block;
+        transform: translateX(-100%);
+      }
+    }
+
+    .before {
+      width: 0px;
       height: 60px;
       background-color: $gray;
       position: absolute;
@@ -65,13 +72,33 @@
       position: unset;
     }
 
+    .about-me-wrapper,
+    .my-skills-wrapper {
+      position: relative;
+      .before {
+        background-color: $gray2;
+        position: absolute;
+        width: 180px;
+        height: 600px;
+        top: 50%;
+        z-index: -1;
+        transform: translateY(-50%);
+        @include media("<=desktop") {
+          width: 160px;
+          height: 500px;
+        }
+        @include media("<=tablet") {
+          display: none;
+        }
+      }
+    }
+
     .about-me,
     .my-skills {
       background-color: $white;
       width: 440px;
       min-height: 300px;
       padding: 20px 30px;
-      position: relative;
       @include media("<=desktop") {
         width: 320px;
         min-height: 240px;
@@ -90,6 +117,7 @@
         font-size: 2.55rem;
         margin: 30px 0;
         text-transform: uppercase;
+        overflow: hidden;
         @include media("<=desktop") {
           font-size: 1.8rem;
           margin: 10px 0;
@@ -109,62 +137,54 @@
           font-size: 1.15rem;
         }
       }
-      &::before {
-        content: "";
-        background-color: $gray2;
-        position: absolute;
-        width: 200px;
-        height: 600px;
-        top: 50%;
-        z-index: -1;
-        transform: translateY(-50%);
-        @include media("<=desktop") {
-          width: 160px;
-          height: 500px;
-        }
-        @include media("<=tablet") {
-          display: none;
-        }
-      }
     }
 
-    .about-me {
+    .about-me-wrapper {
       align-self: flex-start;
-      margin-top: 120px;
-      box-shadow: -7px 7px 22px rgba($color: $black, $alpha: 0.25);
+      margin-top: 160px;
       @include media("<=tablet") {
         margin: 40px;
         align-self: center;
       }
-      @include media("<=phone") {
-        box-shadow: none;
+      .about-me {
+        box-shadow: -7px 7px 22px rgba($color: $black, $alpha: 0.25);
+        @include media("<=phone") {
+          box-shadow: none;
+        }
       }
-      &::before {
+      .before {
         right: -50px;
         @include media("<=desktop") {
           right: -60px;
         }
       }
     }
-
-    .my-skills {
+    .my-skills-wrapper {
       align-self: flex-end;
       margin-bottom: 120px;
-      box-shadow: 7px 7px 22px rgba($color: $black, $alpha: 0.25);
       @include media("<=tablet") {
         margin: 0;
         align-self: center;
       }
-      @include media("<=phone") {
-        box-shadow: none;
-      }
-      ul {
-        li {
-          list-style-image: url("../../images/list-bullet.svg");
+      .my-skills {
+        box-shadow: 7px 7px 22px rgba($color: $black, $alpha: 0.25);
+        @include media("<=phone") {
+          box-shadow: none;
+        }
+        ul {
+          li {
+            list-style-image: url("../../images/list-bullet.svg");
+            .info-holder {
+              overflow: hidden;
+              span {
+                display: block;
+                transform: translateY(100%);
+              }
+            }
+          }
         }
       }
-
-      &::before {
+      .before {
         left: -50px;
         @include media("<=desktop") {
           left: -60px;

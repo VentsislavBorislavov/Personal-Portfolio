@@ -21,12 +21,12 @@ const Nav = () => {
     });
 
     gsap.to(".intro-link span", {
-      yPercent: -100,
+      yPercent: 100,
       scrollTrigger: {
         trigger: "footer h2",
         scrub: true,
-        start: "50 100%",
-        end: "50 80%",
+        start: "80 100%",
+        end: "80 80%",
         toggleActions: "play none none reverse",
       },
     });
