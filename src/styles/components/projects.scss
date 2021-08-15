@@ -1,4 +1,8 @@
 #projects {
+  .h2-holder {
+    width: 100;
+    display: flex;
+  }
   h2 {
     color: $black;
     font-size: 3.4rem;
@@ -6,7 +10,10 @@
     margin-top: 80px;
     margin-right: 250px;
     text-shadow: 4px 4px 6px rgba($color: $black, $alpha: 0.25);
-    text-align: end;
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+
     @include media("<=desktop") {
       font-size: 3rem;
       margin-right: 210px;
@@ -20,26 +27,34 @@
       font-size: 2rem;
       margin-right: 80px;
     }
-    span {
-      position: relative;
-      &::before {
-        content: "";
-        width: 100%;
-        height: 120%;
-        background-color: $gray;
-        position: absolute;
-        right: -50%;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: -1;
-        @include media("<=phone") {
-          height: 40px;
-        }
+
+    .text-holder {
+      margin-left: auto;
+      overflow: hidden;
+
+      span {
+        display: block;
+        transform: translateX(100%);
+      }
+    }
+
+    .before {
+      width: 100%;
+      height: 120%;
+      background-color: $gray;
+      position: absolute;
+      right: -50%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+      @include media("<=phone") {
+        height: 40px;
       }
     }
   }
   .all-projects {
     margin-bottom: 200px;
+
     .project {
       width: 80%;
       margin: 200px auto 0 auto;
@@ -47,15 +62,20 @@
       grid-template-columns: 2fr 1fr;
       align-items: start;
       justify-content: center;
+      opacity: 0;
+      transform: translateY(100%);
+
       @include media("<=tablet") {
         width: 100%;
         grid-template-columns: 1fr;
         align-items: center;
         margin-top: 120px;
       }
+
       .video-holder {
         display: flex;
         justify-content: center;
+
         video {
           width: 70%;
           border: 2px solid $black;
@@ -70,6 +90,7 @@
       .info {
         display: flex;
         flex-direction: column;
+
         @include media("<=tablet") {
           margin-top: 100px;
           align-items: center;
@@ -78,9 +99,11 @@
         h3 {
           font-size: 2vw;
           margin: 0;
+
           @include media("<=tablet") {
             font-size: 4.5vw;
           }
+
           @include media("<=phone") {
             font-size: 7vw;
           }
@@ -91,9 +114,11 @@
           text-transform: uppercase;
           font-weight: 600;
           margin: 30px 0 20px;
+
           @include media("<=tablet") {
             font-size: 3.4vw;
           }
+
           @include media("<=phone") {
             font-size: 5vw;
           }
@@ -103,6 +128,7 @@
           @include media("<=tablet") {
             text-align: center;
           }
+
           span {
             color: white;
             background-color: black;
@@ -112,9 +138,11 @@
             padding: 0.2rem 0.8rem;
             font-weight: 600;
             margin: 10px 5px 0 0;
+
             @include media("<=tablet") {
               font-size: 2.3vw;
             }
+
             @include media("<=phone") {
               font-size: 3.5vw;
             }
@@ -123,9 +151,11 @@
 
         .project-links {
           display: flex;
+
           @include media("<=tablet") {
             align-content: center;
           }
+
           .link {
             display: flex;
             align-items: center;
@@ -135,18 +165,23 @@
             font-weight: 600;
             text-decoration: none;
             margin: 0 10px 0 0;
+
             @include media("<=tablet") {
               font-size: 2.4vw;
             }
+
             @include media("<=phone") {
               font-size: 3.5vw;
             }
+
             img {
               width: 2vw;
               margin-right: 5px;
+
               @include media("<=tablet") {
                 width: 4vw;
               }
+
               @include media("<=phone") {
                 width: 5vw;
               }
