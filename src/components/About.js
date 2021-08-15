@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useState, useEffect } from "react";
+import H2 from "./H2";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -94,12 +95,7 @@ const About = () => {
   }, []);
   return (
     <section id="about">
-      <h2 className="about-h2">
-        <div className="before"></div>
-        <div className="about-holder">
-          <span>About</span>
-        </div>
-      </h2>
+      <H2 className="about-h2">About</H2>
       <div className="wrapper">
         <div className="about-me-wrapper">
           <div className="about-me">

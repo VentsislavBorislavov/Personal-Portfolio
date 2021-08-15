@@ -3,6 +3,7 @@
   min-height: 100vh;
   width: 100%;
   position: relative;
+
   @include media("<=tablet") {
     min-height: auto;
   }
@@ -16,6 +17,7 @@
     margin-left: 250px;
     position: relative;
     text-shadow: 4px 4px 6px rgba($color: $black, $alpha: 0.25);
+
     @include media("<=desktop") {
       font-size: 3rem;
       margin-left: 210px;
@@ -30,7 +32,7 @@
       margin-left: 70px;
     }
 
-    .about-holder {
+    .text-holder {
       overflow: hidden;
       span {
         display: block;
@@ -60,10 +62,12 @@
     bottom: 10%;
     left: 10%;
     right: 10%;
+
     @include media("<=desktop") {
       left: 8%;
       right: 8%;
     }
+
     @include media("<=tablet") {
       width: 90%;
       margin: auto;
@@ -75,6 +79,7 @@
     .about-me-wrapper,
     .my-skills-wrapper {
       position: relative;
+
       .before {
         background-color: $gray2;
         position: absolute;
@@ -83,10 +88,12 @@
         top: 50%;
         z-index: -1;
         transform: translateY(-50%);
+
         @include media("<=desktop") {
           width: 160px;
           height: 500px;
         }
+
         @include media("<=tablet") {
           display: none;
         }
@@ -99,29 +106,35 @@
       width: 440px;
       min-height: 300px;
       padding: 20px 30px;
+
       @include media("<=desktop") {
         width: 320px;
         min-height: 240px;
       }
+
       @include media("<=tablet") {
         position: unset;
         margin-top: 50px;
         min-height: unset;
       }
+
       @include media("<=phone") {
         border: none;
         width: 100%;
         padding: 0;
       }
+
       h3 {
         font-size: 2.55rem;
         margin: 30px 0;
         text-transform: uppercase;
         overflow: hidden;
+
         @include media("<=desktop") {
           font-size: 1.8rem;
           margin: 10px 0;
         }
+
         @include media("<=phone") {
           font-size: 1.8rem;
         }
@@ -130,9 +143,11 @@
       li {
         font-size: 1.6rem;
         font-weight: 600;
+
         @include media("<=desktop") {
           font-size: 1.3rem;
         }
+
         @include media("<=phone") {
           font-size: 1.15rem;
         }
@@ -142,18 +157,22 @@
     .about-me-wrapper {
       align-self: flex-start;
       margin-top: 160px;
+
       @include media("<=tablet") {
         margin: 40px;
         align-self: center;
       }
+
       .about-me {
         box-shadow: -7px 7px 22px rgba($color: $black, $alpha: 0.25);
+
         @include media("<=phone") {
           box-shadow: none;
         }
       }
       .before {
         right: -50px;
+
         @include media("<=desktop") {
           right: -60px;
         }
@@ -162,20 +181,25 @@
     .my-skills-wrapper {
       align-self: flex-end;
       margin-bottom: 120px;
+
       @include media("<=tablet") {
         margin: 0;
         align-self: center;
       }
       .my-skills {
         box-shadow: 7px 7px 22px rgba($color: $black, $alpha: 0.25);
+
         @include media("<=phone") {
           box-shadow: none;
         }
+
         ul {
           li {
             list-style-image: url("../../images/list-bullet.svg");
+
             .info-holder {
               overflow: hidden;
+
               span {
                 display: block;
                 transform: translateY(100%);
@@ -186,6 +210,7 @@
       }
       .before {
         left: -50px;
+
         @include media("<=desktop") {
           left: -60px;
         }
