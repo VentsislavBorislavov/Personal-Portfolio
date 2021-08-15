@@ -1,7 +1,49 @@
+import { useEffect } from "react";
 import { footerLinks } from "../data";
 import githubIcon from "../images/github-icon.svg";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "footer",
+        start: "center 86%",
+        end: "center 86%",
+      },
+    });
+    tl.from("footer h2", {
+      opacity: 0,
+      y: -60,
+      duration: 1,
+      ease: "power4.out",
+    })
+      .to("footer .more-projects", {
+        y: 0,
+        opacity: 1,
+        delay: -0.6,
+        duration: 1,
+        ease: "power4.out",
+      })
+      .to("footer h4", {
+        y: 0,
+        opacity: 1,
+        delay: -0.7,
+        duration: 1,
+        ease: "power4.out",
+      })
+      .to("footer .links", {
+        y: 0,
+        opacity: 1,
+        delay: -0.7,
+        duration: 1,
+        ease: "power4.out",
+      });
+  }, []);
+
   return (
     <footer id="contact">
       <h2>
