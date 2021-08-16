@@ -5,6 +5,7 @@ import facebookIcon from "../images/facebook-icon.svg";
 import linkedinIcon from "../images/linkedin-icon.svg";
 import emailIcon from "../images/email-icon.svg";
 import calcVideo from "../videos/react-calc.mp4";
+import noteVideo  from "../videos/note-app.mp4"
 
 export const projects = [
   {
@@ -27,16 +28,16 @@ export const projects = [
   {
     name: "Notes-app",
     technologies: ["React", "Redux", "firebase", "framer-motion"],
-    video: calcVideo,
+    video: noteVideo,
     links: [
       {
         site: "GitHub",
-        link: "https://github.com/VentsislavBorislavov/react-calculator",
+        link: "https://github.com/VentsislavBorislavov/react-notes-app",
         icon: githubIcon,
       },
       {
         site: "Notes-app",
-        link: "https://nvcez.csb.app/",
+        link: "https://react-note-app-b76e7.web.app/",
         icon: webIcon,
       },
     ],
