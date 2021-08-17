@@ -62,10 +62,14 @@ footer {
     opacity: 0;
     transform: translateY(-40px);
     a {
+      display: inline-block;
       font-weight: 700;
       font-size: 1.3rem;
-      padding: 0 5px;
+      padding: 0 10px;
+      transition: transform 100ms;
+
       @include media("<=tablet") {
+        padding: 0 5px;
         font-size: 1.1rem;
       }
       @include media("<=phone") {
@@ -75,6 +79,10 @@ footer {
         @include media("<=phone") {
           width: 16px;
         }
+      }
+      &:hover {
+        transition: transform 100ms;
+        transform: scale(1.1);
       }
     }
   }
