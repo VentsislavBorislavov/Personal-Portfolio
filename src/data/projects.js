@@ -3,7 +3,7 @@ import codesandboxIcon from "../images/codesandbox-icon.svg";
 import webIcon from "../images/web-icon.svg";
 import calcVideo from "../videos/react-calc.mp4";
 import noteVideo  from "../videos/note-app.mp4"
-import weatherVideo from "../videos/weather-appl.mp4"
+import weatherVideo from "../videos/weather-app.mp4"
 
 export const projects = [
   {

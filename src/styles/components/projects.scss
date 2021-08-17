@@ -75,15 +75,38 @@
       .video-holder {
         display: flex;
         justify-content: center;
+        height: 100%;
 
-        video {
+        .video-wrapper {
           width: 70%;
-          border: 2px solid $black;
-          cursor: pointer;
+          position: relative;
           transform: rotate(-10deg);
-          border-radius: 20px;
-          @include media("<=phone") {
-            width: 90%;
+          video {
+            width: 100%;
+            border: 2px solid $black;
+            cursor: pointer;
+            border-radius: 20px;
+            @include media("<=phone") {
+              width: 90%;
+            }
+          }
+
+          .play-button {
+            position: absolute;
+            top: 45%;
+            left: 45%;
+            width: 10%;
+            opacity: 0.9;
+            cursor: pointer;
+            @include media("<=phone") {
+              opacity: 1;
+            }
+          }
+          &:hover {
+            .play-button {
+              transform: scale(1.1);
+              opacity: 1;
+            }
           }
         }
       }
