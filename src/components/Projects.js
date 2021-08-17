@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { projects } from "../data";
+import { projects } from "../data/projects";
 import Video from "./Video";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";

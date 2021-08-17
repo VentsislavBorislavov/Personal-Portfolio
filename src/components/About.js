@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useState, useEffect } from "react";
-import { skills } from "../data";
+import { skills } from "../data/aboutMe";
 import H2 from "./H2";
 
 gsap.registerPlugin(ScrollTrigger);

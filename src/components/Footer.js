@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { footerLinks } from "../data";
+import { footerLinks } from "../data/footer";
 import githubIcon from "../images/github-icon.svg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
