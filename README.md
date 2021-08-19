@@ -13,7 +13,7 @@ This is my personal portfolio
 
 ### Links
 
-- Live Site URL: [React-weather-app](https://ventsislav-borislavov.netlify.app/)
+- Live Site URL: [Ventsislav Borislavov](https://ventsislav-borislavov.xyz/)
 
 ### Built with
 
@@ -26,4 +26,4 @@ This is my personal portfolio
 
 ## Author
 
-- Website - [Ventsislav Borislavov](https://ventsislav-borislavov.netlify.app/)
+- Website - [Ventsislav Borislavov](https://ventsislav-borislavov.xyz/)
